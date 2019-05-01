@@ -20,7 +20,7 @@ class MapListSensorBuffer : public BaseSensorBuffer<T>
 template <typename T>
 void MapListSensorBuffer<T>::store(SensorData<T>& data)
 {
-	buffer[data.get_id()].push_back(SensorData<T>(data.get_id(),data.get_value()));
+	buffer[data.get_id()].push_back(data);
 }
 
 
